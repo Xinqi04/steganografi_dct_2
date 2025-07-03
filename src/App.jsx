@@ -234,10 +234,13 @@ function App() {
                         />
                     </div>
 
-                    <button id="decodeBtn" className="action-btn" onClick={handleDecode} disabled={isLoading}>
-                        {isLoading ? <div className="loading"></div> : <i className="fas fa-unlock-alt"></i>}
-                        {isLoading ? 'Mengekstrak...' : 'Ekstrak Pesan'}
-                    </button>
+                    {/* Button di bawah */}
+                    <div className="button-area">
+                        <button id="decodeBtn" className="action-btn" onClick={handleDecode} disabled={isLoading}>
+                            {isLoading ? <div className="loading"></div> : <i className="fas fa-unlock-alt"></i>}
+                            {isLoading ? 'Mengekstrak...' : 'Ekstrak Pesan'}
+                        </button>
+                    </div>
 
                     {showDecodeResult && (
                         <div id="decodeResult" className="result-area">
@@ -246,6 +249,7 @@ function App() {
                         </div>
                     )}
                 </div>
+
             </div>
         </div>
     );
